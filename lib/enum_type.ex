@@ -121,7 +121,7 @@ defmodule EnumType do
         def cast(unquote(option)), do: {:ok, unquote(option)}
         def cast(unquote(value)), do: {:ok, unquote(option)}
 
-        def load(unquote(value)), do: {:ok, unquote(option)}
+        def load(unquote(value)), do: {:ok, unquote(option).value}
 
         # Allow both querying by Module and setting a value to the Module when updating or inserting.
         def dump(unquote(option)), do: {:ok, unquote(option).value}
